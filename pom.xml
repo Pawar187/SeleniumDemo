@@ -76,6 +76,18 @@
 
   </dependencies>
   
+  
+  <plugins>
+<plugin>
+<groupId>org.apache.maven.plugins</groupId>
+<artifactId>maven-compiler-plugin</artifactId>
+<version>3.8.1</version>
+<configuration>
+<release>17.0.10</release>
+</configuration>
+</plugin>
+</plugins>
+  
   <profiles>
   <profile>
   <id>Regression</id>
@@ -87,7 +99,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
-        <version>3.0.0-M6</version>
+<version>3.8.1</version>
         <configuration>
           <suiteXmlFiles>
             <suiteXmlFile>testSuites/testng.xml</suiteXmlFile>
@@ -111,7 +123,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
-        <version>3.0.0-M6</version>
+<version>3.8.1</version>
         <configuration>
           <suiteXmlFiles>
             <suiteXmlFile>testSuites/Purchase.xml</suiteXmlFile>
@@ -135,7 +147,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
-        <version>3.0.0-M6</version>
+<version>3.8.1</version>
         <configuration>
           <includes>
             <include>**/TestNGTestRunner.java</include>
@@ -158,7 +170,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
-        <version>3.0.0-M6</version>
+<version>3.8.1</version>
         <configuration>
           <suiteXmlFiles>
             <suiteXmlFile>testSuites/ErrorValidationTests.xml</suiteXmlFile>
@@ -180,13 +192,23 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
-        <version>3.0.0-M6</version>
+<version>3.8.1</version>
         <configuration>
           <suiteXmlFiles>
             <suiteXmlFile>testSuites/testng.xml</suiteXmlFile>
           </suiteXmlFiles>
         </configuration>
       </plugin>
+      
+<plugin>
+<groupId>org.apache.maven.plugins</groupId>
+<artifactId>maven-compiler-plugin</artifactId>
+<version>3.8.1</version>
+<configuration>
+<release>17.0.10</release>
+</configuration>
+</plugin>
+
         <!-- clean lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->
         <plugin>
           <artifactId>maven-clean-plugin</artifactId>
